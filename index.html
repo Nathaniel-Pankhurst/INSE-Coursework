@@ -67,6 +67,15 @@ zPtRe6c5tpWwPTS7bJiz0znN
 <div class="jumbotron">
     <div class="container">
         <h1>Welcome!</h1>
+        <a href="#" onclick="signOut();">Sign out</a>
+        <script>
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                });
+            }
+        </script>
         <p>INSE Wincy Charter is a website for users to create Work Breakdown Trees (WBT), PERT Charts and GANTT Charts for your projects</p>
     </div>
 </div>
