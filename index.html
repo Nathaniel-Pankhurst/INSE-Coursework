@@ -28,6 +28,7 @@ zPtRe6c5tpWwPTS7bJiz0znN
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/signout.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,7 +58,9 @@ zPtRe6c5tpWwPTS7bJiz0znN
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
-                <div class="g-signin2" data-onsuccess="onSignIn">Sign-In</div>
+                <div>
+                <a class="g-signin2" data-onsuccess="onSignIn" onclick=window.location="index2.html">Sign-In </a>
+                </div>
             </form>
         </div><!--/.navbar-collapse -->
     </div>
@@ -67,15 +70,8 @@ zPtRe6c5tpWwPTS7bJiz0znN
 <div class="jumbotron">
     <div class="container">
         <h1>Welcome!</h1>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                    console.log('User signed out.');
-                });
-            }
-        </script>
+
+
         <p>INSE Wincy Charter is a website for users to create Work Breakdown Trees (WBT), PERT Charts and GANTT Charts for your projects</p>
     </div>
 </div>
