@@ -2,12 +2,8 @@
     text-align: center;
 }
 
-#welcomebar {
-  height: 45vh;
+#welcome {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 
 }
 
@@ -31,6 +27,13 @@
 * {
   font-family: 'Monda', sans-serif;
 }
+
+img{
+  height: 40px;
+  width: 100%;
+}
+
+
 /*
     Font style - 'EB Garamond', serif
 
