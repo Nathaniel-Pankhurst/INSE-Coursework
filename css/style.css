@@ -3,17 +3,23 @@
 }
 
 #welcomebar {
-  height: 55vh;
+  height: 45vh;
   text-align: center;
-
-}
-
-h1{
   display: flex;
-justify-content: center;
-flex-direction: column;
-height: 200px;
+  justify-content: center;
+  flex-direction: column;
+
 }
+
+.navbar-toggle, .icon-bar{
+  border: 1px solid black;
+}
+
+.navbar-toggle{
+  margin-top: 10px;
+}
+
+
 .navbar {
   background-color: #8BD3EE;
 }
