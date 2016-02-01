@@ -2,7 +2,29 @@
     text-align: center;
 }
 
+#welcomebar {
+  height: 55vh;
+  text-align: center;
 
+}
+
+h1{
+  display: flex;
+justify-content: center;
+flex-direction: column;
+height: 200px;
+}
+.navbar {
+  background-color: #8BD3EE;
+}
+
+.navbar-brand{
+  color: black;
+}
+
+* {
+  font-family: 'Monda', sans-serif;
+}
 /*
     Font style - 'EB Garamond', serif
 
