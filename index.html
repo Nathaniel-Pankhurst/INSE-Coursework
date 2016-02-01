@@ -39,7 +39,8 @@ zPtRe6c5tpWwPTS7bJiz0znN
     <!-- Over-riding CSS -->
     <link href="css/style.css" rel="stylesheet">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    
+    <meta name="google-signin-client_id" content="688918232593-qk42r89uu2p6u9odi2h772b35vt78lgl.apps.googleusercontent.com">
+
 </head>
 
 <body>
@@ -58,7 +59,7 @@ zPtRe6c5tpWwPTS7bJiz0znN
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
                 <div>
-                <a class="btn btn-default" href="index2.html" role="button">Sign-In </a>
+                <a class="g-signin2" data-onsuccess="onSignIn" onclick=window.location="index2.html">Sign-In </a>
                 </div>
             </form>
         </div><!--/.navbar-collapse -->
