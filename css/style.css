@@ -27,6 +27,10 @@ body{
   color: black;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 * {
   font-family: 'Monda', sans-serif;
 }
@@ -36,6 +40,23 @@ img{
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+#forms{
+  border: 2px solid blue;
+  background-color: salmon;
+  height: 80vh;
+  margin-top: 10px;
+}
+
+#graphs{
+  border: 2px solid red;
+  background-color: white;
+  height: 80vh;
+  margin-top: 10px;
+}
+
+>>>>>>> origin/master
 
 /*
     Font style - 'EB Garamond', serif
