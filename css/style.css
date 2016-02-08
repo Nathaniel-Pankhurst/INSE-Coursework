@@ -33,6 +33,19 @@ img{
   width: 100%;
 }
 
+#forms{
+  border: 2px solid blue;
+  background-color: salmon;
+  height: 80vh;
+  margin-top: 10px;
+}
+
+#graphs{
+  border: 2px solid red;
+  background-color: white;
+  height: 80vh;
+  margin-top: 10px;
+}
 
 /*
     Font style - 'EB Garamond', serif
