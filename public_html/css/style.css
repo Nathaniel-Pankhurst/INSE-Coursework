@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+}
+
+#welcome {
+  text-align: center;
+
+}
+
+.navbar-toggle, .icon-bar{
+  border: 1px solid black;
+}
+
+.navbar-toggle{
+  margin-top: 10px;
+}
+
+
+.navbar {
+  background-color: #8BD3EE;
+}
+
+.navbar-brand{
+  color: black;
+}
+
+* {
+  font-family: 'Monda', sans-serif;
+}
+
+img{
+  height: 40px;
+  width: 100%;
+}
+
+#forms{
+  border: 2px solid blue;
+  background-color: salmon;
+  height: 80vh;
+  margin-top: 10px;
+}
+
+#myDiagram{
+  border: 2px solid red;
+  background-color: white;
+  height: 80vh;
+  margin-top: 10px;
+}
+
+#myCarousel{
+  margin-top: 73px;
+}
+/*
+    Font style - 'EB Garamond', serif
+
+    Colours - Blue - Heading bar , Grey - background-color, another color - text.
+*/
