@@ -6,17 +6,19 @@
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_PERSISTENT => true
     );
-    try {
-        $con = new PDO($dsn, DBUSER, DBPASS, $option);
-        $con->query("use ".DBNAME);
-    } catch (PDOException $failure) {
-        DB::throwException("Failed to connect to database");
-    }
-
-    try {
-        $con = new PDO($dsn, DBUSER, DBPASS, $option);
-        $con->exec(DBTABLES);
-    } catch (PDOExceptio $failure) {
-        DB::throwException("Failed to create tables for database");
+    $showquery = "show databases like '".DBNAME."'";
+    try{
+     $DB = new PDO($dsn, "root", "root", $option);
+     $showresult = $DB->query($showquery);
+     if($showresult->fetch()){
+     $DB->exec("USE".DBNAME."");
+     //$DB->exec($insert);
+     }else{
+      $DB->query("CREATE DATABASE".DBNAME."");
+      $DB->exec("USE".DBNAME."");
+      $DB->exec(DBTABLES);
+     // $DB->exec($insert);
+     }
+    }catch(PDOException $failure){
     }
 ?>
