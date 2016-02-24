@@ -85,7 +85,7 @@
         $query = "UPDATE Owner SET Name=?, Email=? WHERE ID=?;";
         try{
           $DB = new PDO(DSN, DBUSER, DBPASS, OPTION);
-          $results = $DB->query($query);
+          $results = $DB->query($query, $binds);
           $DB = null;
         }catch(PDOException $failure){
           var_dump $failure
@@ -96,7 +96,7 @@
         $query = "UPDATE Project SET Name=? WHERE ID=?;";
         try{
           $DB = new PDO(DSN, DBUSER, DBPASS, OPTION);
-          $results = $DB->query($query);
+          $results = $DB->query($query, $binds);
           $DB = null;
         }catch(PDOException $failure){
           var_dump $failure
@@ -108,7 +108,7 @@
         Earliest_End=?, Latest_Start=?, Latest_End=?, Parent_object=? WHERE ID=?;";
         try{
           $DB = new PDO(DSN, DBUSER, DBPASS, OPTION);
-          $results = $DB->query($query);
+          $results = $DB->query($query, $binds);
           $DB = null;
         }catch(PDOException $failure){
           var_dump $failure
