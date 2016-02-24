@@ -1,0 +1,61 @@
+.container {
+    text-align: center;
+}
+
+.navbar-toggle, .icon-bar{
+  border: 1px solid black;
+}
+
+.navbar-toggle{
+  margin-top: 10px;
+}
+
+.navbar {
+  background-color: #8BD3EE;
+}
+
+.navbar-brand{
+  color: black;
+}
+
+*{
+  font-family: 'Monda', sans-serif;
+}
+
+img{
+  height: 40px;
+  width: 100%;
+}
+
+#forms{
+  background-color: salmon;
+  height: 77vh;
+  margin-top: 10px;
+  padding-top:20px;
+}
+
+#charts{
+  background-color: white;
+  height: 68vh;
+  margin-top: 10px;
+}
+
+#myCarousel{
+  margin-top: 73px;
+}
+
+footer {
+	text-align:center;
+
+}
+.chartNav {
+	text-align:center;
+	width:75%;
+	padding-top:20px;
+	float:right;
+}
+.navBtn {
+	width:30%;
+	height:40px;
+	border-radius:5px;
+}

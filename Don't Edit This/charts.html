@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>INSE Wincy Charter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Over-riding CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <meta name="google-signin-client_id" content="688918232593-qk42r89uu2p6u9odi2h772b35vt78lgl.apps.googleusercontent.com">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="js/charts.js" async></script>
+
+</head>
+<body>
+	<!--Navigation Bar-->
+	<nav class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">INSE Wincy Charter</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right">
+					<div>
+						<a class="btn btn-default" href="index.html" role="button">Sign out</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!--Main Content-->
+	<div class="jumbotron">
+		<!--Chart Navigation-->
+		<div class="chartNav">
+			<button id="WBT" class="navBtn">WBT</button>
+			<button id="PERT" class="navBtn">PERT</button>
+			<button id="GANTT" class="navBtn">GANTT</button>
+		</div>
+		<!--Input form for the charts-->
+		<div id="forms" class="col-md-3">
+			<p> Please Enter The Information: </p>
+			<form id="input" class="navbar-form navbar-left">
+				<div class="form-group">
+					Name:<input type="text" class="form-control"><br>
+					Link Name:<input type="text" class="form-control"><br>
+					Start: <input type="Date" class="form-control"><br>
+					End: <input type="Date" class="form-control"><br>
+				</div>
+			</form>
+			<button id="addButton" class="btn btn-default">Add</button>
+		</div>
+		<!--Div to display the charts-->
+		<div id="charts" class="col-md-9"></div>
+		<hr>
+		<footer>&copy; Group 10A</footer>
+	</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
