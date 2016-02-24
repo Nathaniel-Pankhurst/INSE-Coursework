@@ -10,6 +10,12 @@ const DBUSER= "root";           // Username for the databse
 const DBPASS = "root";              // Database Password
 const DBNAME = "insewincy";   // Database Name
 
+const DSN = "mysql:".DBHOST.";dbname=".DBNAME.";";
+const OPTION = array(
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+  PDO::ATTR_PERSISTENT => true
+);
+
 /*Database Tables*/
 
 const DBTABLES = "CREATE TABLE Owner(
