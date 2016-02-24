@@ -1,5 +1,18 @@
 <?php
-const DBINIT = "CREATE TABLE Owner(
+/**
+* @author: UP745065
+* @author: UP737044
+*/
+
+/*Databse Information*/
+const DBHOST = "localhost";     // Host Name
+const DBUSER= "root";           // Username for the databse
+const DBPASS = "root";              // Database Password
+const DBNAME = "insewincy";   // Database Name
+
+/*Database Tables*/
+
+const DBTABLES = "CREATE TABLE Owner(
   ID INT PRIMARY KEY,
   Name VARCHAR(45) NOT NULL,
   Email VARCHAR(45) NOT NULL
@@ -24,3 +37,4 @@ const DBINIT = "CREATE TABLE Owner(
   FOREIGN KEY (Project_id) REFERENCES Project(ID),
   FOREIGN KEY (Parent_object) REFERENCES Object(ID)
 )";
+?>
