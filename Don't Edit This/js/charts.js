@@ -11,17 +11,29 @@ document.getElementById("addButton").addEventListener("click",inputs);
 var ganttArray = [];
 var wbtArray = [];
 
+// Validation of user inputs
+function inputValidate(vName, vName2, vStart, vEnd) {
+  var inputBool = true;
+  if ((vName.length < 1) || (vName2.length < 1) || (vStart == "") || (vEnd == "")) {
+    inputBool = false;
+  }
+  return inputBool;
+}
+
 //Taking user input to create the charts
 function inputs() {
-var name = document.getElementById("input").elements[0].value;
-var linkName = document.getElementById("input").elements[1].value;
-var start = document.getElementById("input").elements[2].value;
-var end = document.getElementById("input").elements[3].value;
+  var name = document.getElementById("input").elements[0].value;
+  var linkName = document.getElementById("input").elements[1].value;
+  var start = document.getElementById("input").elements[2].value;
+  var end = document.getElementById("input").elements[3].value;
+  var validation = inputValidate(name, linkName, start, end);
+  if (validation) {
+    var ganttInput = [name, new Date(start), new Date(end)];
+    var wbtInput = [name, linkName];
+    ganttArray.push(ganttInput);
+    wbtArray.push(wbtInput);
+  }
 
-var ganttInput = [name, new Date(start), new Date(end)];
-var wbtInput = [name, linkName];
-ganttArray.push(ganttInput);
-wbtArray.push(wbtInput);
 }
 
 //WBT function for the chart
