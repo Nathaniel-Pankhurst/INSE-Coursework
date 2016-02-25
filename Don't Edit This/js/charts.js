@@ -11,6 +11,9 @@ document.getElementById("addButton").addEventListener("click",inputs);
 var ganttArray = [];
 var wbtArray = [];
 
+// Variable that records the current chart in user
+var chosen = "WBT";
+
 // Validation of user inputs
 function inputValidate(vName, vName2, vStart, vEnd) {
   var inputBool = true;
@@ -36,12 +39,14 @@ function inputs() {
     var wbtInput = [name, linkName];
     ganttArray.push(ganttInput);
     wbtArray.push(wbtInput);
+    pageRefresh();
   }
 
 }
 
 //WBT function for the chart
 function WBT() {
+    chosen = "WBT"; // records user's graph choice
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
         var data = new google.visualization.DataTable();
@@ -60,6 +65,7 @@ function WBT() {
 
 //GANTT function for the chart
 function GANTT() {
+      chosen = "Gantt"; // Records user's graph choice
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var container = document.getElementById('charts');
@@ -73,4 +79,20 @@ function GANTT() {
 
         chart.draw(dataTable);
       }
+}
+
+// Refresh charts
+function pageRefresh() {
+  console.log("Attempting refresh");
+  switch(chosen) {
+    case "WBT":
+      WBT();
+      break;
+    case "PERT":
+      console.log("No Pert chart yet.");
+      break;
+    case "Gantt":
+      GANTT();
+      break;
+  }
 }
