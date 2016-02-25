@@ -17,6 +17,10 @@ function inputValidate(vName, vName2, vStart, vEnd) {
   if ((vName.length < 1) || (vName2.length < 1) || ((vStart == "") || (vStart == null)) || ((vEnd == "") || (vEnd == null))) {
     inputBool = false;
   }
+  if (new Date(vEnd).getDate() < new Date(vStart).getDate()) {
+    inputBool = false;
+    Alert("Please enter an end date that is after the start date.")
+  }
   return inputBool;
 }
 
@@ -50,7 +54,7 @@ function WBT() {
         // Create the chart.
         var chart = new google.visualization.OrgChart(document.getElementById('charts'));
         // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, {allowHtml:true});
+        chart.draw(data, {allowHtml:false});
       }
 }
 
