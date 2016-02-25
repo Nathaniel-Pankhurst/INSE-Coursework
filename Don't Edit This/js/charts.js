@@ -14,7 +14,7 @@ var wbtArray = [];
 // Validation of user inputs
 function inputValidate(vName, vName2, vStart, vEnd) {
   var inputBool = true;
-  if ((vName.length < 1) || (vName2.length < 1) || (vStart == "") || (vEnd == "")) {
+  if ((vName.length < 1) || (vName2.length < 1) || ((vStart == "") || (vStart == null)) || ((vEnd == "") || (vEnd == null))) {
     inputBool = false;
   }
   return inputBool;
