@@ -11,25 +11,21 @@ const DBPASS = "root";              // Database Password
 const DBNAME = "insewincy";   // Database Name
 
 const DSN = "mysql:".DBHOST.";dbname=".DBNAME.";";
-const OPTION = array(
-  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-  PDO::ATTR_PERSISTENT => true
-);
-
 /*Database Tables*/
 
-const DBTABLES = "CREATE TABLE Owner(
+const OWNERTABLE = "CREATE TABLE Owner(
   ID INT PRIMARY KEY,
   Name VARCHAR(45) NOT NULL,
   Email VARCHAR(45) NOT NULL
 )";
-  "CREATE TABLE Project (
+const PROJECTTABLE = "CREATE TABLE Project (
   ID INT PRIMARY KEY,
   Name VARCHAR(45),
   Owner-ID INT,
   FOREIGN KEY (Owner-ID) REFERENCES Owner(ID)
 )";
-  "CREATE TABLE Object (
+
+const OBJECTTABLE = "CREATE TABLE Object (
   ID INT PRIMARY KEY,
   Name VARCHAR(100),
   Slack TIME,
